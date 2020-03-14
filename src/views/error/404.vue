@@ -1,7 +1,7 @@
 <template>
   <div class="error">
     <img src="@assets/images/404.png"
-         alt="">
+         alt="" />
     <p>啊哦~ 你所访问的页面不存在</p>
     <div class="error-btns">
       <el-button type="primary"
@@ -18,22 +18,20 @@
 export default {
   methods: {
     goHome() {
-      this.$router.push('/');
+      this.$router.push('/')
     },
     goBack() {
-      this.$router.go(-1);
+      this.$router.go(-1)
     }
   }
 }
 </script>
 
-
 <style lang="scss" scoped>
 .error {
   padding-top: 50px;
   height: 100vh;
-  background: url(../../assets/images/error_cloud.png) repeat-x center bottom
-    $--color-bg-blue;
+  background: url(../../assets/images/error_cloud.png) repeat-x center bottom $--color-bg-blue;
   text-align: center;
   box-sizing: border-box;
   p {

@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { setStorage } from '@utils/index';
+import { setStorage } from '@utils/index'
 export default {
   data() {
     return {
@@ -43,27 +43,23 @@ export default {
         password: '123123'
       },
       rules: {
-        userName: [
-          { required: true, message: '请输入用户名', trigger: 'blur' }
-        ],
-        password: [
-          { required: true, message: '请输入密码', trigger: 'blur' }
-        ]
+        userName: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
+        password: [{ required: true, message: '请输入密码', trigger: 'blur' }]
       }
     }
   },
   methods: {
     submitForm(formName) {
-      this.$refs[formName].validate((valid) => {
+      this.$refs[formName].validate(valid => {
         if (valid) {
           // 请求登录接口后，设置token
-          setStorage('1111111');
-          this.$router.push('/');
+          setStorage('1111111')
+          this.$router.push('/')
         } else {
-          this.$message.warning('账号或密码格式不正确');
-          return false;
+          this.$message.warning('账号或密码格式不正确')
+          return false
         }
-      });
+      })
     }
   }
 }
@@ -73,8 +69,7 @@ export default {
 .login {
   position: relative;
   height: 100vh;
-  background: url(../../assets/images/error_cloud.png) repeat-x center bottom
-    $--color-bg-blue;
+  background: url(../../assets/images/error_cloud.png) repeat-x center bottom $--color-bg-blue;
   &-box {
     position: absolute;
     left: 50%;
